@@ -1,0 +1,8 @@
+# cabal
+dist/
+dist-newstyle
+cabal.project*
+
+# vim
+*.sw*
+*~
