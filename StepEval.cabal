@@ -1,0 +1,58 @@
+cabal-version:      3.0
+name:               StepEval
+version:            0.1.0.0
+synopsis:
+    Tool for the step-by-step evaluation of basic Haskell expressions.
+
+-- A longer description of the package.
+-- description:
+homepage:           https://github.com/hmichelova/step-eval
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            NONE
+author:             Henrieta Micheľová
+maintainer:         xmichel@fi.muni.cz
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files:
+    CHANGELOG.md
+    README.md
+
+library
+    exposed-modules:
+        StepEval
+
+    -- Modules included in this library but not exported.
+    other-modules:
+       DataTypes
+       FunDefs
+       PatExpFuns
+
+    -- LANGUAGE extensions used by modules in this package.
+    default-extensions:
+        TemplateHaskell
+
+    -- used by some modules
+    other-extensions:
+
+    build-depends:
+        base ^>=4.16.0.0,
+        template-haskell ^>=2.18.0.0,
+        transformers ^>=0.5.6.2,
+        containers ^>=0.6.5.1,
+        text ^>=1.2.5.0,
+        hint ^>=0.9.0.5
+
+    -- Directories containing source files.
+    -- hs-source-dirs:
+    default-language: Haskell2010
+
+test-suite step-eval-test
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          MyLibTest.hs
+    build-depends:    base ^>=4.16.0.0
