@@ -1,5 +1,5 @@
 {-# LANGUAGE TemplateHaskell, OverloadedStrings #-}
-module Step_eval (evaluateExp) where
+module StepEval (evaluateExp) where
 
 import FunDefs
 import DataTypes
